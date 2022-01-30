@@ -1,6 +1,6 @@
-<template v-slot:default>
-  <v-simple-table dark>
-    <template v-slot:default>
+<template>
+  <div>
+    <v-simple-table>
       <thead>
         <tr>
           <th class="text-left">HostName</th>
@@ -23,8 +23,8 @@
           </v-btn>
         </tr>
       </tbody>
-    </template>
-  </v-simple-table>
+    </v-simple-table>
+  </div>
 </template>
 
 <script>
@@ -40,6 +40,98 @@ export default {
           mode: "Standart",
           lang: "Russian",
         },
+        {
+          hostname: "Test server",
+          players: 999,
+          ping: 100,
+          mode: "Standart",
+          lang: "Russian",
+        },
+        {
+          hostname: "Test server",
+          players: 999,
+          ping: 100,
+          mode: "Standart",
+          lang: "Russian",
+        },
+        {
+          hostname: "Test server",
+          players: 999,
+          ping: 100,
+          mode: "Standart",
+          lang: "Russian",
+        },
+        {
+          hostname: "Test server",
+          players: 999,
+          ping: 100,
+          mode: "Standart",
+          lang: "Russian",
+        },
+        {
+          hostname: "Test server",
+          players: 999,
+          ping: 100,
+          mode: "Standart",
+          lang: "Russian",
+        },
+        {
+          hostname: "Test server",
+          players: 999,
+          ping: 100,
+          mode: "Standart",
+          lang: "Russian",
+        },
+        {
+          hostname: "Test server",
+          players: 999,
+          ping: 100,
+          mode: "Standart",
+          lang: "Russian",
+        },
+        {
+          hostname: "Test server",
+          players: 999,
+          ping: 100,
+          mode: "Standart",
+          lang: "Russian",
+        },
+        {
+          hostname: "Test server",
+          players: 999,
+          ping: 100,
+          mode: "Standart",
+          lang: "Russian",
+        },
+        {
+          hostname: "Test server",
+          players: 999,
+          ping: 100,
+          mode: "Standart",
+          lang: "Russian",
+        },
+        {
+          hostname: "Test server",
+          players: 999,
+          ping: 100,
+          mode: "Standart",
+          lang: "Russian",
+        },
+        {
+          hostname: "Test server",
+          players: 999,
+          ping: 100,
+          mode: "Standart",
+          lang: "Russian",
+        },
+        {
+          hostname: "Test server",
+          players: 999,
+          ping: 100,
+          mode: "Standart",
+          lang: "Russian",
+        },
+
       ],
     };
   },

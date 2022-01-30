@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-system-bar style="-webkit-app-region: drag" window>
+    <v-system-bar fixed style="-webkit-app-region: drag">
       <v-icon>mdi-message</v-icon>
       <span>Better SA-MP 0.3.7</span>
       <v-spacer></v-spacer>
@@ -11,15 +11,15 @@
         >mdi-close</v-icon
       >
     </v-system-bar>
-    <v-card>
+    <v-card class="pt-5" fixed>
       <v-tabs grow v-model="current_tab" color="#7d7d6c">
         <v-tabs-slider dark></v-tabs-slider>
         <v-tab v-for="tab of tabs" :key="tab.id" :to="tab.route">
           {{ tab.name }}
         </v-tab>
       </v-tabs>
-      <router-view></router-view>
     </v-card>
+    <router-view></router-view>
   </div>
 </template>
 
