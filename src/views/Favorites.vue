@@ -28,112 +28,20 @@
 </template>
 
 <script>
+const { ipcRenderer } = require("electron");
 export default {
   name: "Favorites",
-  data() {
+  data: function() {
     return {
-      servers: [
-        {
-          hostname: "Test server",
-          players: 999,
-          ping: 100,
-          mode: "Standart",
-          lang: "Russian",
-        },
-        {
-          hostname: "Test server",
-          players: 999,
-          ping: 100,
-          mode: "Standart",
-          lang: "Russian",
-        },
-        {
-          hostname: "Test server",
-          players: 999,
-          ping: 100,
-          mode: "Standart",
-          lang: "Russian",
-        },
-        {
-          hostname: "Test server",
-          players: 999,
-          ping: 100,
-          mode: "Standart",
-          lang: "Russian",
-        },
-        {
-          hostname: "Test server",
-          players: 999,
-          ping: 100,
-          mode: "Standart",
-          lang: "Russian",
-        },
-        {
-          hostname: "Test server",
-          players: 999,
-          ping: 100,
-          mode: "Standart",
-          lang: "Russian",
-        },
-        {
-          hostname: "Test server",
-          players: 999,
-          ping: 100,
-          mode: "Standart",
-          lang: "Russian",
-        },
-        {
-          hostname: "Test server",
-          players: 999,
-          ping: 100,
-          mode: "Standart",
-          lang: "Russian",
-        },
-        {
-          hostname: "Test server",
-          players: 999,
-          ping: 100,
-          mode: "Standart",
-          lang: "Russian",
-        },
-        {
-          hostname: "Test server",
-          players: 999,
-          ping: 100,
-          mode: "Standart",
-          lang: "Russian",
-        },
-        {
-          hostname: "Test server",
-          players: 999,
-          ping: 100,
-          mode: "Standart",
-          lang: "Russian",
-        },
-        {
-          hostname: "Test server",
-          players: 999,
-          ping: 100,
-          mode: "Standart",
-          lang: "Russian",
-        },
-        {
-          hostname: "Test server",
-          players: 999,
-          ping: 100,
-          mode: "Standart",
-          lang: "Russian",
-        },
-        {
-          hostname: "Test server",
-          players: 999,
-          ping: 100,
-          mode: "Standart",
-          lang: "Russian",
-        },
-
-      ],
+      servers: []
     };
+  },
+
+  mounted: function () {
+    ipcRenderer.send("Favorite:Get");
+    ipcRenderer.on("Favorite:Data", (event, res) => {
+      this.servers = res
+    })
   },
 };
 </script>

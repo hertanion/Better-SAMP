@@ -5,10 +5,14 @@
 </template>
 
 <script>
-//const { ipcRenderer } = require("electron");
 import Header from "./components/Header";
 export default {
   name: "App",
+  data: function() {
+    return {
+      // servers: [],
+    };
+  },
   components: {
     Header,
   },
