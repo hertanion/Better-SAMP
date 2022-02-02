@@ -37,11 +37,12 @@ export default {
     };
   },
 
-  mounted: function () {
+  beforeCreate: function () {
     ipcRenderer.send("Favorite:Get");
     ipcRenderer.on("Favorite:Data", (event, res) => {
       this.servers = res
     })
+    ipcRenderer.off()
   },
 };
 </script>

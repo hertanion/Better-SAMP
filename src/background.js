@@ -3,7 +3,8 @@
 import { app, protocol, ipcMain, BrowserWindow } from "electron";
 import { createProtocol } from "vue-cli-plugin-electron-builder/lib";
 import installExtension, { VUEJS_DEVTOOLS } from "electron-devtools-installer";
-import fs from "fs"
+//import fs from "fs"
+import * as Utils from "./utils/samp.js"
 const isDevelopment = process.env.NODE_ENV !== "production";
 
 let win = null;
@@ -38,10 +39,10 @@ async function createWindow() {
     win.loadURL("app://./index.html");
     win.setMenuBarVisibility(false);
   }
-  let raw = fs.readFileSync(__dirname + "/SA/favorite.json");
-  let list = JSON.parse(raw);
-  FavoriteList = list.servers
-  console.log(list.servers)
+  //let raw = fs.readFileSync(__dirname + "/SA/favorite.json");
+  //let list = JSON.parse(raw);
+  FavoriteList = []
+  Utils.getServers()
   await registerIpcCallbacks();
 }
 
