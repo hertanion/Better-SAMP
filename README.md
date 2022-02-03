@@ -1,24 +1,41 @@
-# vue-electron-app
+# Better-SAMP
 
-## Project setup
-```
-npm install
-```
+Better SA-MP is an alternative launcher for San Andreas Multiplayer.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Features
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- Support for your favorite SA-MP servers. All your favorite servers will be automatically transferred to the launcher.
+- Support for SA-MP masterlists, Internet/Hosted tabs.
+- SA-MP Version Manager.
+- Installation of modifications for the game in one click.
+- A lot of launcher and game settings.
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Tech
+
+Better-SAMP uses the following developments to work:
+
+- [Node.js](https://nodejs.org/en/)
+- [Vue](https://github.com/vuejs/vue)
+- [Vuetify](https://github.com/vuetifyjs/vuetify)
+- [Electron](https://www.electronjs.org/)
+
+## Installation
+
+Download the latest release and run the installer.
+## Launching in development mode
+Use these commands:
+
+```sh
+npm run electron:serve
+```
+## Building for source
+
+For production release:
+
+```sh
+npm run electron:build
+```
+## License
+
+MIT License
