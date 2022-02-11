@@ -17,6 +17,7 @@ Better-SAMP uses the following developments to work:
 
 - [Node.js](https://nodejs.org/en/)
 - [Vue](https://github.com/vuejs/vue)
+- [Vuex](https://github.com/vuejs/vuex)
 - [Vuetify](https://github.com/vuetifyjs/vuetify)
 - [Electron](https://www.electronjs.org/)
 
