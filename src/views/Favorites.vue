@@ -12,13 +12,13 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in servers" :key="item.hostname">
-          <td>{{ item.hostname }}</td>
+        <tr v-for="item in getServers" :key="item.IP">
+          <td>{{ item.name }}</td>
           <td>{{ item.players }}</td>
           <td>{{ item.ping }}</td>
           <td>{{ item.mode }}</td>
           <td>{{ item.lang }}</td>
-          <v-btn class="mx-3 my-2" small fab>
+          <v-btn class="mx-3 my-1" small fab>
             <v-icon>mdi-play</v-icon>
           </v-btn>
         </tr>
@@ -28,21 +28,10 @@
 </template>
 
 <script>
-const { ipcRenderer } = require("electron");
+import { mapGetters } from "vuex";
 export default {
   name: "Favorites",
-  data: function() {
-    return {
-      servers: []
-    };
-  },
 
-  beforeCreate: function () {
-    ipcRenderer.send("Favorite:Get");
-    ipcRenderer.on("Favorite:Data", (event, res) => {
-      this.servers = res
-    })
-    ipcRenderer.off()
-  },
+  computed: mapGetters(["getServers"])
 };
 </script>

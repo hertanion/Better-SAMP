@@ -4,11 +4,11 @@ import { app, protocol, ipcMain, BrowserWindow } from "electron";
 import { createProtocol } from "vue-cli-plugin-electron-builder/lib";
 import installExtension, { VUEJS_DEVTOOLS } from "electron-devtools-installer";
 //import fs from "fs"
-import * as Utils from "./utils/samp.js"
+import * as Utils from "./utils/samp.js";
 const isDevelopment = process.env.NODE_ENV !== "production";
 
 let win = null;
-let FavoriteList = [];
+let FavoriteList = null;
 
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([
@@ -39,11 +39,8 @@ async function createWindow() {
     win.loadURL("app://./index.html");
     win.setMenuBarVisibility(false);
   }
-  //let raw = fs.readFileSync(__dirname + "/SA/favorite.json");
-  //let list = JSON.parse(raw);
-  FavoriteList = []
-  Utils.getServers()
   await registerIpcCallbacks();
+  FavoriteList = await Utils.getServers();
 }
 
 // Quit when all windows are closed.
@@ -100,7 +97,7 @@ async function registerIpcCallbacks() {
     win.minimize();
   });
 
-  ipcMain.on("Favorite:Get", async(request) => {
-    win.webContents.send("Favorite:Data", FavoriteList)
-  })
+  ipcMain.on("Favorite:Get", async () => {
+    win.webContents.send("Favorite:Data", FavoriteList);
+  });
 }

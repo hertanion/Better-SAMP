@@ -8,10 +8,8 @@
 import Header from "./components/Header";
 export default {
   name: "App",
-  data: function() {
-    return {
-      // servers: [],
-    };
+  mounted() {
+    this.$store.dispatch("loadServers");
   },
   components: {
     Header,
