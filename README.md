@@ -2,6 +2,9 @@
 
 Better SA-MP is an alternative launcher for San Andreas Multiplayer.
 
+![image](https://user-images.githubusercontent.com/90708207/174340057-12200086-3d54-47d8-a7b0-d63b5f1f3ee3.png)
+
+
 ## Features
 
 - Support for your favorite SA-MP servers. All your favorite servers will be automatically transferred to the launcher.
