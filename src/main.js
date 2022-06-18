@@ -14,6 +14,6 @@ new Vue({
   vuetify,
   render: (h) => h(App),
   created() { // for fix router in Electron (production build)
-    this.$router.push("/");
+    this.$router.push("/").catch(()=>{});
   }
 }).$mount("#app");

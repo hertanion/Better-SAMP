@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="my-12">
     <v-simple-table>
       <thead>
         <tr>
@@ -18,7 +18,7 @@
           <td>{{ item.ping }}</td>
           <td>{{ item.mode }}</td>
           <td>{{ item.lang }}</td>
-          <v-btn class="mx-3 my-1" small fab>
+          <v-btn class="mx-3 my-3" small>
             <v-icon>mdi-play</v-icon>
           </v-btn>
         </tr>

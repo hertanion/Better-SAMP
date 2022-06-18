@@ -19,6 +19,7 @@ export default {
   },
   getters: {
     getServers(state) {
+      console.log("call getServers")
       return state.servers;
     },
   },
