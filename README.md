@@ -2,8 +2,6 @@
 
 Better SA-MP is an alternative launcher for San Andreas Multiplayer. 
 
-Вадим что за хуйня почему я могу делать коммиты?
-
 ![image](https://user-images.githubusercontent.com/90708207/174340057-12200086-3d54-47d8-a7b0-d63b5f1f3ee3.png)
 
 
